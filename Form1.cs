@@ -202,7 +202,7 @@ namespace SearchGCS
                     };
                     var satPayload = await Task.Run(() => JsonConvert.SerializeObject(sm));
                     HttpContent content = new StringContent(satPayload, Encoding.UTF8, "application/json");
-                    var url = "http://ec2-54-90-166-180.compute-1.amazonaws.com:5000/getSatellite";
+                    var url = " YOUR RESTFUL API";
 
 
                     using (HttpClient weatherClient = new HttpClient())
@@ -357,8 +357,8 @@ namespace SearchGCS
         // Firebase authentication config
         IFirebaseConfig config = new FirebaseConfig
         {
-            AuthSecret = "KyWVqkV3c3R3IfgpKZ6oqbISw2Bb4B607R06j0CR",
-            BasePath = "https://fir-rtc-e5aeb.firebaseio.com/"
+            AuthSecret = "YOUR AUTH SECRET",
+            BasePath = "YOUR BASE PATH"
         };
 
         IFirebaseClient client;
@@ -410,7 +410,7 @@ namespace SearchGCS
             mapProviders[0] = GMapProviders.GoogleMap;
             mapProviders[3] = GMapProviders.GoogleSatelliteMap;
 
-            GMapProviders.GoogleMap.ApiKey = "AIzaSyBleg8zbo7UUQW0L_VdSrxKD8VxB5Q3BGc";
+            GMapProviders.GoogleMap.ApiKey = "your GMAP API";
 
             for (int i = 0; i < 4; i++)
             {
